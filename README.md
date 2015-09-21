@@ -9,6 +9,6 @@ Jogo Desenvolvido em C++ com SDL e OpenGL.
 - Renderização de Objetos.
 
 /* Resoluções */
-- Criação de um Loop Interno
+- Criação de um Loop Interno.
 - Uma Engine com Verificação de Entradas.
 - Usar a Biblioteca SDL para carregar imagens e OpenGL para construção gráfica.
