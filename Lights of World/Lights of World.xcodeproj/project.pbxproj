@@ -14,6 +14,7 @@
 		428B0CBD1BAFD455001FA55C /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428B0CBB1BAFD455001FA55C /* GLUT.framework */; };
 		428B0CBF1BAFD462001FA55C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428B0CBE1BAFD462001FA55C /* Cocoa.framework */; };
 		428B0CC11BAFD4D4001FA55C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 428B0CC01BAFD4D4001FA55C /* main.cpp */; settings = {ASSET_TAGS = (); }; };
+		42A70C121BB15AB500CA926F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 42A70C111BB15AB500CA926F /* README.md */; settings = {ASSET_TAGS = (); }; };
 		42B36B321BAFD7B9003E9276 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42B36B301BAFD7B9003E9276 /* game.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		428B0CBB1BAFD455001FA55C /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		428B0CBE1BAFD462001FA55C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		428B0CC01BAFD4D4001FA55C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		42A70C111BB15AB500CA926F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		42B36B301BAFD7B9003E9276 /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
 		42B36B311BAFD7B9003E9276 /* game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +55,7 @@
 		428B0C8A1BAFC77D001FA55C = {
 			isa = PBXGroup;
 			children = (
+				42A70C111BB15AB500CA926F /* README.md */,
 				428B0CB01BAFD39D001FA55C /* Sources */,
 				428B0CAB1BAFD39D001FA55C /* Graphic Contents */,
 				428B0C951BAFC77D001FA55C /* Lights of World */,
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A70C121BB15AB500CA926F /* README.md in Sources */,
 				42B36B321BAFD7B9003E9276 /* game.cpp in Sources */,
 				428B0CC11BAFD4D4001FA55C /* main.cpp in Sources */,
 			);
