@@ -15,6 +15,9 @@
 		428B0CBF1BAFD462001FA55C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428B0CBE1BAFD462001FA55C /* Cocoa.framework */; };
 		428B0CC11BAFD4D4001FA55C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 428B0CC01BAFD4D4001FA55C /* main.cpp */; settings = {ASSET_TAGS = (); }; };
 		42A70C121BB15AB500CA926F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 42A70C111BB15AB500CA926F /* README.md */; settings = {ASSET_TAGS = (); }; };
+		42A70C141BB162AA00CA926F /* libglfw.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A70C131BB162AA00CA926F /* libglfw.3.1.dylib */; };
+		42A70C151BB162B600CA926F /* libglfw.3.1.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 42A70C131BB162AA00CA926F /* libglfw.3.1.dylib */; };
+		42A70C181BB18B8300CA926F /* graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42A70C161BB18B8300CA926F /* graphics.cpp */; settings = {ASSET_TAGS = (); }; };
 		42B36B321BAFD7B9003E9276 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42B36B301BAFD7B9003E9276 /* game.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,9 @@
 		428B0CBE1BAFD462001FA55C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		428B0CC01BAFD4D4001FA55C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		42A70C111BB15AB500CA926F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		42A70C131BB162AA00CA926F /* libglfw.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.1.dylib; path = ../../../../../../usr/local/lib/libglfw.3.1.dylib; sourceTree = "<group>"; };
+		42A70C161BB18B8300CA926F /* graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graphics.cpp; sourceTree = "<group>"; };
+		42A70C171BB18B8300CA926F /* graphics.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = graphics.hpp; sourceTree = "<group>"; };
 		42B36B301BAFD7B9003E9276 /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
 		42B36B311BAFD7B9003E9276 /* game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A70C141BB162AA00CA926F /* libglfw.3.1.dylib in Frameworks */,
 				428B0CBF1BAFD462001FA55C /* Cocoa.framework in Frameworks */,
 				428B0CBC1BAFD455001FA55C /* GLKit.framework in Frameworks */,
 				428B0CBD1BAFD455001FA55C /* GLUT.framework in Frameworks */,
@@ -100,6 +107,7 @@
 		428B0CA81BAFD39D001FA55C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42A70C131BB162AA00CA926F /* libglfw.3.1.dylib */,
 				428B0CBE1BAFD462001FA55C /* Cocoa.framework */,
 				428B0CBA1BAFD455001FA55C /* GLKit.framework */,
 				428B0CBB1BAFD455001FA55C /* GLUT.framework */,
@@ -156,6 +164,8 @@
 				428B0CC01BAFD4D4001FA55C /* main.cpp */,
 				42B36B301BAFD7B9003E9276 /* game.cpp */,
 				42B36B311BAFD7B9003E9276 /* game.hpp */,
+				42A70C161BB18B8300CA926F /* graphics.cpp */,
+				42A70C171BB18B8300CA926F /* graphics.hpp */,
 			);
 			path = "Lights of World";
 			sourceTree = "<group>";
@@ -217,6 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A70C151BB162B600CA926F /* libglfw.3.1.dylib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +240,7 @@
 			files = (
 				42A70C121BB15AB500CA926F /* README.md in Sources */,
 				42B36B321BAFD7B9003E9276 /* game.cpp in Sources */,
+				42A70C181BB18B8300CA926F /* graphics.cpp in Sources */,
 				428B0CC11BAFD4D4001FA55C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +335,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /usr/local/lib;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = "Lights of World/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				OBJROOT = "$(PROJECT_DIR)/Builds/MacOS/Intermediates";
@@ -330,6 +344,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SHARED_PRECOMPS_DIR = "$(PROJECT_DIR)/Binaries/MacOS/SharedPrecompiledHeaders";
 				SYMROOT = "$(PROJECT_DIR)/Builds/MacOS/Products";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -337,6 +352,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /usr/local/lib;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = "Lights of World/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				OBJROOT = "$(PROJECT_DIR)/Builds/MacOS/Intermediates";
@@ -344,6 +361,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SHARED_PRECOMPS_DIR = "$(PROJECT_DIR)/Binaries/MacOS/SharedPrecompiledHeaders";
 				SYMROOT = "$(PROJECT_DIR)/Builds/MacOS/Products";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

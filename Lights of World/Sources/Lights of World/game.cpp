@@ -7,12 +7,27 @@
 //
 
 #include <iostream>
+
+#include "graphics.hpp"
 #include "game.hpp"
 
 Game::Game() {
-    std::cout << "GAME" << std::endl;
+    kGameLoop();
 }
 
 Game::~Game() {
     
+}
+
+void Game::kGameLoop() {
+    Graphics graphics;
+    
+    while (k_game_running) {
+        
+        glfwSwapBuffers(graphics.windowSpace);
+        glfwPollEvents();
+    }
+}
+
+void Game::kGameEvents() {
 }

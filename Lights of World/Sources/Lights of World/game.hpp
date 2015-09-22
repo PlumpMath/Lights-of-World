@@ -9,11 +9,18 @@
 #ifndef _GAME_HPP_
 #define _GAME_HPP_
 
+#include <GLFW/glfw3.h>
 #include <stdio.h>
 
 struct Game {
     Game();
     ~Game();
+    
+    void kGameLoop();
+    void kGameEvents();
+    
+private:
+    bool k_game_running;
 };
 
 #endif /* _GAME_HPP_ */
