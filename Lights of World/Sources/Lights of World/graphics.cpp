@@ -11,11 +11,19 @@
 
 #include "graphics.hpp"
 
+namespace {
+    const int kWindowWidth=1280;
+    const int kWindowHeight=800;
+}
+
 Graphics::Graphics() {
+    
     if (!glfwInit()) {
         std::cout << "Erro com Frameworks" << std::endl;
     }
-    glfwShowWindow(windowSpace);
+    
+    windowSpace = glfwCreateWindow(kWindowWidth, kWindowHeight, "Lights of World", NULL, NULL);
+    glfwMakeContextCurrent(windowSpace);
 }
 
 Graphics::~Graphics() {
@@ -23,6 +31,6 @@ Graphics::~Graphics() {
     glfwTerminate();
 }
 
-void Graphics::kGameWindow() {
-    
+bool Graphics::kGameGetEvents(int key) {
+    return glfwGetKey(windowSpace, key);
 }

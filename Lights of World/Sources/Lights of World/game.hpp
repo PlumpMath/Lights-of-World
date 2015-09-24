@@ -12,12 +12,15 @@
 #include <GLFW/glfw3.h>
 #include <stdio.h>
 
+struct Graphics;
+struct Player;
+
 struct Game {
     Game();
     ~Game();
     
     void kGameLoop();
-    void kGameEvents();
+    void kGameEvents(Graphics *graphics, Player *player);
     
 private:
     bool k_game_running;

@@ -10,8 +10,9 @@
 
 #include "graphics.hpp"
 #include "game.hpp"
+#include "player.hpp"
 
-Game::Game() {
+Game::Game(): k_game_running(true) {
     kGameLoop();
 }
 
@@ -20,14 +21,25 @@ Game::~Game() {
 }
 
 void Game::kGameLoop() {
+    
     Graphics graphics;
+    Player player;
     
     while (k_game_running) {
+        glClear(GL_COLOR_BUFFER_BIT);
+        
+        kGameEvents(&graphics, &player);
         
         glfwSwapBuffers(graphics.windowSpace);
         glfwPollEvents();
     }
 }
 
-void Game::kGameEvents() {
+void Game::kGameEvents(Graphics *graphics, Player *player) {
+    /* Verifica Todos os Eventos */
+    if (graphics->kGameGetEvents(GLFW_KEY_ESCAPE)) {
+        k_game_running = false;
+    }
+    
+    player->kPlayerEvents(graphics);
 }

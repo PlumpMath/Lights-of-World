@@ -3,9 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>files</key>
-	<dict/>
+	<dict>
+		<key>Resources/libglfw.3.1.dylib</key>
+		<data>
+		YgZ4VWo+DXEn1R21FSzs4zaibqM=
+		</data>
+	</dict>
 	<key>files2</key>
-	<dict/>
+	<dict>
+		<key>Resources/libglfw.3.1.dylib</key>
+		<data>
+		YgZ4VWo+DXEn1R21FSzs4zaibqM=
+		</data>
+	</dict>
 	<key>rules</key>
 	<dict>
 		<key>^Resources/</key>

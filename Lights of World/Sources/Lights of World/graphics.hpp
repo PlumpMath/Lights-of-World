@@ -19,10 +19,10 @@ struct Graphics {
     
     GLFWwindow *windowSpace;
     
-    void kGameWindow();
+    bool kGameGetEvents(int key);
     
 private:
-    char *windowTitle[50];
+    
 };
 
 #endif /* graphics_hpp */
