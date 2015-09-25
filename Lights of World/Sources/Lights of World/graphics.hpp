@@ -10,6 +10,7 @@
 #define graphics_hpp
 
 #include <stdio.h>
+#include <SDL/SDL.h>
 
 struct GLFWwindow;
 

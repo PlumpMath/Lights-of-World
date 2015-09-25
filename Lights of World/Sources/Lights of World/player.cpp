@@ -7,14 +7,17 @@
 //
 
 #include <iostream>
+#include <math.h>
 
 #include "player.hpp"
+#include "game.hpp"
 #include "graphics.hpp"
 #include <GLFW/glfw3.h>
 
 namespace {
-    const float kPlayerAcceleration = 0.0012f;
-    const float kPlayerVelocity = 0.02;
+    const float kSlowdownFactor=0.85f;
+    const float kWalkingAcceleration=0.01f;
+    const float kMaxSpeedX=0.6f;
 }
 
 Player::Player() {
@@ -46,16 +49,92 @@ void Player::LifePlayer(int life) {
     }
 }
 
+void Player::kDrawPlayer(float x_size, float y_size) {
+    
+    player_image_ = SDL_LoadBMP("/Users/Programmer/Desktop/data 2.bmp");
+    
+    int id=0;
+    y_size += x_size/2;
+    
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glEnable(GL_TEXTURE_2D);
+    glDisable(GL_LIGHTING);
+    
+    glBindTexture(GL_TEXTURE_2D, id);
+    glTexEnvf( GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+    
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexImage2D(GL_TEXTURE_2D, 0, 2, player_image_->w, player_image_->h, 0, GL_BGRA, GL_UNSIGNED_BYTE, player_image_->pixels);
+    
+    glBegin(GL_QUADS);
+    
+    glTexCoord2f(tex_coord_x_pos-(1.0f/19), tex_coord_y_pos);
+    glVertex2d( -x_size+x_, -y_size);
+    
+    glTexCoord2f(tex_coord_x_pos, tex_coord_y_pos);
+    glVertex2d(  x_size+x_, -y_size);
+    
+    glTexCoord2f(tex_coord_x_pos, tex_coord_y_pos-(1.0f/tex_frames_y_));
+    glVertex2d(  x_size+x_,  y_size);
+    
+    glTexCoord2f(tex_coord_x_pos-(1.0f/19), tex_coord_y_pos-(1.0f/tex_frames_y_));
+    glVertex2d( -x_size+x_,  y_size);
+    
+    //glDisable(GL_TEXTURE_2D);
+    glEnd();
+    
+    delete player_image_;
+}
+
+void Player::kUpdatePlayer() {
+    x_ += velocity_x_;
+    velocity_x_ += acceleration_x_;
+    
+    if (acceleration_x_ < 0.0f) {
+        velocity_x_ = std::max(acceleration_x_, -kMaxSpeedX);
+    } else if (acceleration_x_ > 0.0f) {
+        velocity_x_ = std::min(acceleration_x_,  kMaxSpeedX);
+    } else {
+        velocity_x_ *= kSlowdownFactor;
+    }
+    
+    if (player_horizontal_facing_ == LEFT) {
+        current_frame_y_ = 0.0f;
+        
+        if (current_frame_x_ > -(tex_frames_x_-1)) {
+            current_frame_x_ -= 0.5f;
+        }
+        else
+            current_frame_x_ = 0.0f;
+        
+    } else if (player_horizontal_facing_ == RIGHT) {
+        current_frame_y_ = 1.0f;
+        
+        if (current_frame_x_ < (tex_frames_x_-1)) {
+            current_frame_x_ += 0.5f;
+        }
+        else
+            current_frame_x_ = 0.0f;
+    }
+}
+
 void Player::kMovingLeft() {
-    std::cout << "Moving Left" << std::endl;
+    acceleration_x_ = -kWalkingAcceleration;
+    player_horizontal_facing_ = LEFT;
+    tex_coord_y_pos = tex_coord_y_ * current_frame_y_;
+    tex_coord_x_pos = tex_coord_x_ * round(current_frame_x_);
 }
 
 void Player::kMovingRight() {
-    std::cout << "Moving Right" << std::endl;
+    acceleration_x_ = kWalkingAcceleration;
+    player_horizontal_facing_ = RIGHT;
+    tex_coord_y_pos = tex_coord_y_ * current_frame_y_;
+    tex_coord_x_pos = tex_coord_x_ * round(current_frame_x_);
 }
 
 void Player::kMovingStopped() {
-    std::cout << "Moving Stopped" << std::endl;
+    acceleration_x_ = 0.0f;
 }
 
 void Player::kPlayerEvents(Graphics *graphics) {

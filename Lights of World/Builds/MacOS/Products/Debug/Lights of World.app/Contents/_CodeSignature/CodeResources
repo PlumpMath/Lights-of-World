@@ -4,6 +4,18 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Resources/SDL_image.framework/Versions/A/Headers/SDL_image.h</key>
+		<data>
+		JL1ysSh0hik+DoFdxuGQd7c1Aq4=
+		</data>
+		<key>Resources/SDL_image.framework/Versions/A/Resources/Info.plist</key>
+		<data>
+		yvRFPXsU5Jyiuu9RkSz1gjgi/vI=
+		</data>
+		<key>Resources/SDL_image.framework/Versions/A/SDL_image</key>
+		<data>
+		lFBPLM1Fir/P1MJ26CAxA9w0j64=
+		</data>
 		<key>Resources/libglfw.3.1.dylib</key>
 		<data>
 		YgZ4VWo+DXEn1R21FSzs4zaibqM=
@@ -11,6 +23,38 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Resources/SDL_image.framework/Headers</key>
+		<dict>
+			<key>symlink</key>
+			<string>Versions/Current/Headers</string>
+		</dict>
+		<key>Resources/SDL_image.framework/Resources</key>
+		<dict>
+			<key>symlink</key>
+			<string>Versions/Current/Resources</string>
+		</dict>
+		<key>Resources/SDL_image.framework/SDL_image</key>
+		<dict>
+			<key>symlink</key>
+			<string>Versions/Current/SDL_image</string>
+		</dict>
+		<key>Resources/SDL_image.framework/Versions/A/Headers/SDL_image.h</key>
+		<data>
+		JL1ysSh0hik+DoFdxuGQd7c1Aq4=
+		</data>
+		<key>Resources/SDL_image.framework/Versions/A/Resources/Info.plist</key>
+		<data>
+		yvRFPXsU5Jyiuu9RkSz1gjgi/vI=
+		</data>
+		<key>Resources/SDL_image.framework/Versions/A/SDL_image</key>
+		<data>
+		lFBPLM1Fir/P1MJ26CAxA9w0j64=
+		</data>
+		<key>Resources/SDL_image.framework/Versions/Current</key>
+		<dict>
+			<key>symlink</key>
+			<string>A</string>
+		</dict>
 		<key>Resources/libglfw.3.1.dylib</key>
 		<data>
 		YgZ4VWo+DXEn1R21FSzs4zaibqM=

@@ -27,8 +27,11 @@ void Game::kGameLoop() {
     
     while (k_game_running) {
         glClear(GL_COLOR_BUFFER_BIT);
-        
+
         kGameEvents(&graphics, &player);
+        
+        player.kDrawPlayer(0.075f+0.02f, 0.2f+0.05f);
+        player.kUpdatePlayer();
         
         glfwSwapBuffers(graphics.windowSpace);
         glfwPollEvents();
@@ -40,6 +43,5 @@ void Game::kGameEvents(Graphics *graphics, Player *player) {
     if (graphics->kGameGetEvents(GLFW_KEY_ESCAPE)) {
         k_game_running = false;
     }
-    
     player->kPlayerEvents(graphics);
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		42128C321BB3B34100A2CF5E /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42128C301BB3B34100A2CF5E /* player.cpp */; settings = {ASSET_TAGS = (); }; };
+		4285C2CC1BB4C78900577C6D /* SDL_image.framework in Resources */ = {isa = PBXBuildFile; fileRef = 4285C2CA1BB4C78000577C6D /* SDL_image.framework */; };
+		4285C2CE1BB4CB2C00577C6D /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4285C2CD1BB4CB2C00577C6D /* SDL.framework */; };
 		428B0CB51BAFD431001FA55C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428B0CB41BAFD431001FA55C /* AppKit.framework */; };
 		428B0CB71BAFD439001FA55C /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428B0CB61BAFD439001FA55C /* Carbon.framework */; };
 		428B0CB91BAFD448001FA55C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428B0CB81BAFD448001FA55C /* OpenGL.framework */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		42128C301BB3B34100A2CF5E /* player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
 		42128C311BB3B34100A2CF5E /* player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = player.hpp; sourceTree = "<group>"; };
+		4285C2CA1BB4C78000577C6D /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = ../../../../../../Library/Frameworks/SDL_image.framework; sourceTree = "<group>"; };
+		4285C2CD1BB4CB2C00577C6D /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = ../../../../../../Library/Frameworks/SDL.framework; sourceTree = "<group>"; };
 		428B0C931BAFC77D001FA55C /* Lights of World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lights of World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		428B0CAF1BAFD39D001FA55C /* Relatório.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "Relatório.md"; path = "/Users/Programmer/Developer/Lights-of-World/Lights of World/Graphic Contents/Relatório.md"; sourceTree = "<absolute>"; };
 		428B0CB41BAFD431001FA55C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -48,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42A70C141BB162AA00CA926F /* libglfw.3.1.dylib in Frameworks */,
+				4285C2CE1BB4CB2C00577C6D /* SDL.framework in Frameworks */,
 				428B0CBF1BAFD462001FA55C /* Cocoa.framework in Frameworks */,
 				428B0CBC1BAFD455001FA55C /* GLKit.framework in Frameworks */,
 				428B0CBD1BAFD455001FA55C /* GLUT.framework in Frameworks */,
@@ -91,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				42A70C131BB162AA00CA926F /* libglfw.3.1.dylib */,
+				4285C2CD1BB4CB2C00577C6D /* SDL.framework */,
+				4285C2CA1BB4C78000577C6D /* SDL_image.framework */,
 				428B0CBE1BAFD462001FA55C /* Cocoa.framework */,
 				428B0CBA1BAFD455001FA55C /* GLKit.framework */,
 				428B0CBB1BAFD455001FA55C /* GLUT.framework */,
@@ -212,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4285C2CC1BB4C78900577C6D /* SDL_image.framework in Resources */,
 				42A70C191BB2464B00CA926F /* libglfw.3.1.dylib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,12 +329,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = /usr/local/lib;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/Library/Frameworks/SDL.framework/SDL,
+				);
 				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
 				INFOPLIST_FILE = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/Library/Frameworks/SDL.framework/SDL,
+				);
 				OBJROOT = "$(PROJECT_DIR)/Builds/MacOS/Intermediates";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sincrob.Lights-of-World";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -340,12 +357,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = /usr/local/lib;
-				HEADER_SEARCH_PATHS = /usr/local/include;
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/local/lib,
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/Library/Frameworks/SDL.framework/SDL,
+				);
 				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
 				INFOPLIST_FILE = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/Library/Frameworks/SDL.framework/SDL,
+				);
 				OBJROOT = "$(PROJECT_DIR)/Builds/MacOS/Intermediates";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sincrob.Lights-of-World";
 				PRODUCT_NAME = "$(TARGET_NAME)";
