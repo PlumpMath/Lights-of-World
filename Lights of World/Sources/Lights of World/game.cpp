@@ -30,12 +30,13 @@ void Game::kGameLoop() {
 
         kGameEvents(&graphics, &player);
         
-        player.kDrawPlayer(0.075f+0.02f, 0.2f+0.05f);
+        player.kDrawPlayer(0.075f+0.04f, 0.2f+0.05f);
         player.kUpdatePlayer();
         
         glfwSwapBuffers(graphics.windowSpace);
         glfwPollEvents();
     }
+    glfwTerminate();
 }
 
 void Game::kGameEvents(Graphics *graphics, Player *player) {

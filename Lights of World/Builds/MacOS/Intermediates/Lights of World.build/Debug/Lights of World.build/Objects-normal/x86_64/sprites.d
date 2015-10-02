@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/Programmer/Developer/Lights-of-World/Lights\ of\ World/Sources/Lights\ of\ World/player.cpp \
-  /Users/Programmer/Developer/Lights-of-World/Lights\ of\ World/Sources/Lights\ of\ World/player.hpp \
+  /Users/Programmer/Developer/Lights-of-World/Lights\ of\ World/Sources/Lights\ of\ World/sprites.cpp \
+  /usr/local/include/GLFW/glfw3.h \
   /Library/Frameworks/SDL.framework/Headers/SDL.h \
   /Library/Frameworks/SDL.framework/Headers/SDL_main.h \
   /Library/Frameworks/SDL.framework/Headers/SDL_stdinc.h \
@@ -28,7 +28,4 @@ dependencies: \
   /Library/Frameworks/SDL.framework/Headers/SDL_loadso.h \
   /Library/Frameworks/SDL.framework/Headers/SDL_timer.h \
   /Library/Frameworks/SDL.framework/Headers/SDL_version.h \
-  /Users/Programmer/Developer/Lights-of-World/Lights\ of\ World/Sources/Lights\ of\ World/sprites.hpp \
-  /Users/Programmer/Developer/Lights-of-World/Lights\ of\ World/Sources/Lights\ of\ World/game.hpp \
-  /usr/local/include/GLFW/glfw3.h \
-  /Users/Programmer/Developer/Lights-of-World/Lights\ of\ World/Sources/Lights\ of\ World/graphics.hpp
+  /Users/Programmer/Developer/Lights-of-World/Lights\ of\ World/Sources/Lights\ of\ World/sprites.hpp

@@ -23,7 +23,6 @@ struct Graphics {
     bool kGameGetEvents(int key);
     
 private:
-    
 };
 
 #endif /* graphics_hpp */

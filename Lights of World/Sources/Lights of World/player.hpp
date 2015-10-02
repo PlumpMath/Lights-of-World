@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <SDL/SDL.h>
 #include <math.h>
+#include "sprites.hpp"
 
 struct Graphics;
 
@@ -36,11 +37,28 @@ struct Player {
     void kMovingRight();
     void kMovingStopped();
     
+    void kStartJump();
+    void kStopJump();
+    
+    void kDeactivateColision();
+    void kActivateColision();
+    
+    bool kLeftColisionWall();
+    bool kRightColisionWall();
+    
     void kPlayerEvents(Graphics *graphics);
     
 private:
     enum PlayerFacing {
         LEFT, RIGHT
+    };
+    
+    enum PlayerStatus {
+        STOPPED, WALKING, DEAD
+    };
+    
+    enum PlayerColision {
+        ON_WALL, OFF_WALL, ON_GROUND, OFF_GROUND, NO_COLISION
     };
     
     SDL_Surface *player_image_;
@@ -55,7 +73,7 @@ private:
     float velocity_x_=0.0f;
     
     float tex_frames_x_ = 19.0f;
-    float tex_frames_y_ =  2.0f;
+    float tex_frames_y_ =  4.0f;
     
     float tex_coord_x_ = (1.0f/19.0f);
     float tex_coord_y_ = (1.0f/tex_frames_y_);
@@ -66,6 +84,12 @@ private:
     
     PlayerFacing player_horizontal_facing_;
     PlayerFlags  player_flags;
+    PlayerStatus player_current_status_=STOPPED;
+    
+    PlayerColision player_colision_y_=OFF_GROUND;
+    PlayerColision player_colision_x_=OFF_WALL;
+    
+    Sprite *player_spr;
 };
 
 #endif /* player_hpp */
