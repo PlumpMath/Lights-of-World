@@ -22,7 +22,7 @@ Sprite::~Sprite() {
 
 void Sprite::draw(float size_x, float size_y, float *position_x, float *position_y, const char *file, int id) {
     
-    image_ = SDL_LoadBMP(file);
+    //image_ = SDL_LoadBMP(file);
     
     size_y += size_x/2;
     

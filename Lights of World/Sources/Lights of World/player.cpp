@@ -66,7 +66,7 @@ void Player::LifePlayer(int life)
 
 void Player::kDrawPlayer(float x_size, float y_size)
 {
-    /*
+
     player_image_ = SDL_LoadBMP("/Users/Programmer/Desktop/data.bmp");
     
     int id=0;
@@ -100,9 +100,9 @@ void Player::kDrawPlayer(float x_size, float y_size)
 
     glEnd();
 
-    delete player_image_; */
+    delete player_image_;
     
-    player_spr->draw(x_size, y_size, &x_, &y_, "contents/player.bmp");
+    //player_spr->draw(x_size, y_size, &x_, &y_, "contents/player.bmp");
     
 }
 
