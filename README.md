@@ -1,5 +1,5 @@
 # Lights-of-World
-# Jogo Desenvolvido em C++ com SDL e OpenGL.
+# Jogo Desenvolvido em C++ com GLFW, SDL e OpenGL.
 
 # Devlog 1: Relatórios de Desenvolvimento. (Programação)
 

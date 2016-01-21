@@ -46,7 +46,15 @@ struct Player {
     bool kLeftColisionWall();
     bool kRightColisionWall();
     
+    void kJump(float gforce);
+    
     void kPlayerEvents(Graphics *graphics);
+    
+public:
+    float position_x, position_y;
+    
+    float x_=0.0f;
+    float y_=0.0f;
     
 private:
     enum PlayerFacing {
@@ -63,19 +71,22 @@ private:
     
     SDL_Surface *player_image_;
     
-    float x_=0.0f;
-    float y_=0.0f;
+    float current_position_x_=0.0f;
+    float current_position_y_=0.0f;
     
     float current_frame_x_=1.0f;
     float current_frame_y_=0.0f;
     
     float acceleration_x_=0.0f;
+    float acceleration_y_=0.0f;
+    
     float velocity_x_=0.0f;
+    float velocity_y_=0.0f;
     
     float tex_frames_x_ = 19.0f;
     float tex_frames_y_ =  4.0f;
     
-    float tex_coord_x_ = (1.0f/19.0f);
+    float tex_coord_x_ = (1.0f/tex_frames_x_);
     float tex_coord_y_ = (1.0f/tex_frames_y_);
     
     // Padronizadas

@@ -21,10 +21,10 @@ namespace {
     const float kWalkingAcceleration=0.01f;
     const float kMaxSpeedX=0.6f;
     
-    /*
-    const float kAccelerationY=0.8;
-    const float kMaxSpeedY=9.8f;
-    */
+    // Força Gravitacional;
+    const float kGravityForce=0.01f;
+    const float kPlayerMass=30.0f;
+
 }
 
 Player::Player()
@@ -67,43 +67,50 @@ void Player::LifePlayer(int life)
 void Player::kDrawPlayer(float x_size, float y_size)
 {
 
-    player_image_ = SDL_LoadBMP("/Users/Programmer/Desktop/data.bmp");
-    
-    int id=0;
+    player_image_ = SDL_LoadBMP("/Users/Programmer/Developer/Lights-of-World/Lights of World/Sources/Lights of World/contents/player.bmp");
     y_size += x_size/2;
     
-    glColor3f(1.0f, 1.0f, 1.0f);
     glEnable(GL_TEXTURE_2D);
+    glEnable(GL_BLEND);
+    glEnable(GL_ALPHA);
     glDisable(GL_LIGHTING);
     
-    glBindTexture(GL_TEXTURE_2D, id);
-    glTexEnvf( GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+    glClear(GL_COLOR_BUFFER_BIT);
+    glLoadIdentity();
+    
+    glColor4f(1.0f, 1.0f, 1.0f, 0.0f);
+    
+    glBindTexture(GL_TEXTURE_2D, *(GLuint*) player_image_);
+    glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
     
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     
-    glTexImage2D(GL_TEXTURE_2D, 0, 2, player_image_->w, player_image_->h, 0, GL_BGRA, GL_UNSIGNED_BYTE, player_image_->pixels);
+    glTexImage2D(GL_TEXTURE_2D, 0, 2, player_image_->w, player_image_->h, 0, GL_RGBA, GL_UNSIGNED_BYTE, player_image_->pixels);
 
     glBegin(GL_QUADS);
+        glTexCoord2f(tex_coord_x_pos-tex_coord_x_, tex_coord_y_pos);
+        glVertex2d( -x_size+x_, -y_size+y_);
 
-    glTexCoord2f(tex_coord_x_pos-(1.0f/19), tex_coord_y_pos);
-    glVertex2d( -x_size+x_, -y_size);
+        glTexCoord2f(tex_coord_x_pos             , tex_coord_y_pos);
+        glVertex2d(  x_size+x_, -y_size+y_);
 
-    glTexCoord2f(tex_coord_x_pos, tex_coord_y_pos);
-    glVertex2d(  x_size+x_, -y_size);
+        glTexCoord2f(tex_coord_x_pos             , tex_coord_y_pos-tex_coord_y_);
+        glVertex2d(  x_size+x_,  y_size+y_);
 
-    glTexCoord2f(tex_coord_x_pos, tex_coord_y_pos-(1.0f/tex_frames_y_));
-    glVertex2d(  x_size+x_,  y_size);
-
-    glTexCoord2f(tex_coord_x_pos-(1.0f/19), tex_coord_y_pos-(1.0f/tex_frames_y_));
-    glVertex2d( -x_size+x_,  y_size);
-
+        glTexCoord2f(tex_coord_x_pos-tex_coord_x_, tex_coord_y_pos-tex_coord_y_);
+        glVertex2d( -x_size+x_,  y_size+y_);
     glEnd();
-
-    delete player_image_;
+    
+    glDisable(GL_TEXTURE_2D);
+    glDisable(GL_BLEND);
+    glDisable(GL_ALPHA);
+    
+    glFlush();
+    
+    //delete player_image_;
     
     //player_spr->draw(x_size, y_size, &x_, &y_, "contents/player.bmp");
-    
 }
 
 void Player::kStartJump()
@@ -147,10 +154,17 @@ void Player::kUpdatePlayer()
     x_ += velocity_x_;
     velocity_x_ += acceleration_x_;
     
+    y_ += velocity_y_;
+    velocity_y_ += -acceleration_y_;
+    
+    position_x = x_;
+    position_y = y_;
+    
     if (acceleration_x_ < 0.0f) {
         velocity_x_ = std::max(acceleration_x_, -kMaxSpeedX);
     } else if (acceleration_x_ > 0.0f) {
         velocity_x_ = std::min(acceleration_x_,  kMaxSpeedX);
+        
     } else {
         velocity_x_ *= kSlowdownFactor;
     }
@@ -231,8 +245,13 @@ void Player::kMovingStopped()
     tex_coord_x_pos = tex_coord_x_ * round(current_frame_x_);
 }
 
+void Player::kJump(float gforce) {
+    
+}
+
 void Player::kPlayerEvents(Graphics *graphics)
 {
+
     if (graphics->kGameGetEvents(GLFW_KEY_RIGHT)) {
         kMovingRight();
     } else if (graphics->kGameGetEvents(GLFW_KEY_LEFT)) {
@@ -240,7 +259,7 @@ void Player::kPlayerEvents(Graphics *graphics)
     } else {
         kMovingStopped();
     }
-
+    
     if (graphics->kGameGetEvents(GLFW_KEY_UP)) {
         
     } else if (!graphics->kGameGetEvents(GLFW_KEY_UP)) {
@@ -248,4 +267,29 @@ void Player::kPlayerEvents(Graphics *graphics)
     } else {
         
     }
+    
+    
+    // Apply Gravity;
+    switch (player_colision_y_) {
+        case (ON_GROUND):
+            acceleration_y_ = 0.0f;
+            velocity_y_ = 0.0f;
+            
+            break;
+            
+        case (OFF_GROUND):
+            acceleration_y_ += (kPlayerMass * kGravityForce) * 0.0001f;
+            
+            if (y_<=-0.65) {
+                player_colision_y_ = ON_GROUND;
+                y_ = -0.65;
+            }
+            
+            break;
+            
+        default:
+            break;
+    }
+    
+    
 }
