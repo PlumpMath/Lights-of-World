@@ -10,7 +10,6 @@
 #define graphics_hpp
 
 #include <stdio.h>
-#include <SDL/SDL.h>
 
 struct GLFWwindow;
 
@@ -23,6 +22,7 @@ struct Graphics {
     bool kGameGetEvents(int key);
     
 private:
+    
 };
 
 #endif /* graphics_hpp */

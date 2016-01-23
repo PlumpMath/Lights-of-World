@@ -9,7 +9,7 @@
 #include "objects.hpp"
 
 #include <iostream>
-#include <GLUT/glut.h>
+#include <GL\glew.h>
 
 SimpleBox::SimpleBox() {
     
@@ -65,3 +65,49 @@ void FinderLine::kDrawLine(float* find_x_, float* find_y_) {
     glFlush();
     
 }
+
+
+
+// Criação de Objetos Complexos;
+ObjectComplex::ObjectComplex() {
+    
+}
+
+ObjectComplex::~ObjectComplex() {
+    
+}
+
+/* == Estruturas iniciais, estruturas de movimentação e desenhos == */
+void ObjectComplex::kObjectDraw(float _x_size_, float _y_size) {
+    
+}
+
+void ObjectComplex::kApplyMovement(float _x_, float _y_) {
+    
+}
+
+void ObjectComplex::kApplyRotation(float _force_) {
+    
+}
+
+void ObjectComplex::kRunPhysics(void) {
+    
+}
+
+/* == Estruturas privadas == */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

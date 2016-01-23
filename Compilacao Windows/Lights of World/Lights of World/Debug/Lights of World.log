@@ -1,0 +1,21 @@
+﻿Build started 23/01/2016 21:47:57.
+Project "Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Lights of World\Lights of World.vcxproj" on node 2 (Build target(s)).
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glew-1.9.0\include" /I"Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glfw-3.1.1\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\Lights of World\Sources\Lights of World\game.cpp" "..\..\..\Lights of World\Sources\Lights of World\graphics.cpp" "..\..\..\Lights of World\Sources\Lights of World\main.cpp"
+  graphics.cpp
+z:\developer\lights-of-world\lights of world\sources\lights of world\graphics.cpp(35): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+  game.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  main.cpp
+Link:
+  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Debug\Lights of World.exe" /INCREMENTAL /NOLOGO /LIBPATH:"Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glew-1.9.0\lib" /LIBPATH:"Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glfw-3.1.1\lib-vc2012" opengl32.lib glu32.lib glew32.lib glfw3.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Debug\Lights of World.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Debug\Lights of World.lib" /MACHINE:X86 Debug\game.obj
+  Debug\graphics.obj
+  Debug\main.obj
+  Debug\player.obj
+  Lights of World.vcxproj -> Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Debug\Lights of World.exe
+Done Building Project "Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Lights of World\Lights of World.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.81

@@ -20,7 +20,7 @@ struct Game {
     ~Game();
     
     void kGameLoop();
-    void kGameEvents(Graphics *graphics, Player *player);
+    void kGameEvents(Graphics *graphics);
     
 private:
     bool k_game_running;
