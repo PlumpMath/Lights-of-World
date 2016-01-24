@@ -1,4 +1,4 @@
-﻿Build started 24/01/2016 14:16:19.
+﻿Build started 24/01/2016 14:19:13.
 Project "Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Lights of World\Lights of World.vcxproj" on node 2 (Build target(s)).
 ClCompile:
   C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glew-1.9.0\include" /I"Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glfw-3.1.1\include" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\Lights of World\Sources\Lights of World\player.cpp" "..\..\..\Lights of World\Sources\Lights of World\image.cpp"
@@ -223,4 +223,4 @@ Done Building Project "Z:\Developer\Lights-of-World\Compilacao Windows\Lights of
 
 Build FAILED.
 
-Time Elapsed 00:00:03.47
+Time Elapsed 00:00:04.78

@@ -52,7 +52,7 @@ void Player::kDraw(void) {
 
 	std::vector<unsigned char> player_texture=image_loader::loadImage("./bandeira.png", &x_size_tex, &y_size_tex);
 
-	std::cout << player_texture << std::endl;
+	std::cout << player_texture << "testes" << std::endl;
 
     // Anexos Iniciais;
     glColor4f(playerColor[0], playerColor[1], playerColor[2], playerColor[3]);

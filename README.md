@@ -20,3 +20,10 @@ As estruturas que foram melhoradas;
 - Os Desenhos e Entradas de Handle por Objetos;
 - Colisão com verificação de espaço;
 - Desenho de Interseção de espaço em colisão;
+
+# Devlog 30 - Reconstrução;
+Tive que fazer uma coisa vergonhosa, tive que baixar um pacote para a leitura de imagens, pois minha preguiça
+me impede de terminar minha biblioteca para leitura de imagens png, o que não deveria acontecer, pois ela 
+estava pronta, mas acabei perdendo todos os meus arquivos e não havia mandado ela para o GitHub.
+
+- Biblioteca :: lodepng ("http://lodev.org/lodepng/");
