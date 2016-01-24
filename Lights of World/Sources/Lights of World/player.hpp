@@ -6,8 +6,8 @@
 //  Copyright © 2015 Vinicius A.M. Lobo. All rights reserved.
 //
 
-#ifndef player_hpp
-#define player_hpp
+#ifndef _PLAYER_HPP_
+#define _PLAYER_HPP_
 
 #include <stdio.h>
 
@@ -34,4 +34,4 @@ public:
     
 };
 
-#endif /* player_hpp */
+#endif /* _PLAYER_HPP_ */

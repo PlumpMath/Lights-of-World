@@ -22,7 +22,7 @@ Graphics::Graphics() {
         std::cout << "Erro com Frameworks" << std::endl;
     }
     
-    windowSpace = glfwCreateWindow(kWindowWidth, kWindowHeight, "Lights of World", NULL, NULL);
+	windowSpace = glfwCreateWindow(kWindowWidth, kWindowHeight, "Lights of World", glfwGetPrimaryMonitor(), NULL);
     glfwMakeContextCurrent(windowSpace);
 }
 

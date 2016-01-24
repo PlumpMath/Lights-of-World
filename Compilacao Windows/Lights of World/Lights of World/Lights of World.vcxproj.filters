@@ -30,6 +30,12 @@
     <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\lodepng.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\game.hpp">
@@ -42,6 +48,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\player.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\image.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\lodepng.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

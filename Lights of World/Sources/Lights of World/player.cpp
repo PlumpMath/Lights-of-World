@@ -7,6 +7,10 @@
 //
 
 #include <GLFW/glfw3.h>
+#include <iostream>
+#include <vector>
+
+#include "image.hpp"
 
 #include "graphics.hpp"
 #include "object.hpp"
@@ -42,11 +46,23 @@ bool Player::kColisionDetect(GameObject *object) {
 // voids
 void Player::kDraw(void) {
     
+	//image::loadImage("image.png", 300, 400);
+	int x_size_tex=70;
+	int y_size_tex=47;
+
+	std::vector<unsigned char> player_texture=image_loader::loadImage("./bandeira.png", &x_size_tex, &y_size_tex);
+
+	std::cout << player_texture << std::endl;
+
     // Anexos Iniciais;
     glColor4f(playerColor[0], playerColor[1], playerColor[2], playerColor[3]);
-    
+
     glEnable(GL_TEXTURE_2D);
     glEnable(GL_ALPHA);
+
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST); //GL_NEAREST = no smoothing
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glTexImage2D(GL_TEXTURE_2D, 0, 4, x_size_tex, y_size_tex, 0, GL_RGBA, GL_UNSIGNED_BYTE, &player_texture[0]);
     
     glBegin(GL_QUADS);
     
@@ -56,6 +72,7 @@ void Player::kDraw(void) {
         float _vertex_x = (_vertex==0 | _vertex==3) * localScale[0];
         float _vertex_y = (_vertex==2 | _vertex==3) * localScale[1];
         
+		glTexCoord2f(!(_vertex==0 | _vertex==3), !(_vertex==2 | _vertex==3));
         glVertex2f(_vertex_x + localPosition[0], _vertex_y + localPosition[1]);
     }
     

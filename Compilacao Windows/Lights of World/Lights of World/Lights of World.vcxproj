@@ -13,13 +13,17 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\game.cpp" />
     <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\graphics.cpp" />
+    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\lodepng.cpp" />
     <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\main.cpp" />
     <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\object.cpp" />
     <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\player.cpp" />
+    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\game.hpp" />
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\graphics.hpp" />
+    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\image.hpp" />
+    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\lodepng.h" />
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\object.hpp" />
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\player.hpp" />
   </ItemGroup>

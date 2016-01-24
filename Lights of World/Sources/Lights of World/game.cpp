@@ -56,6 +56,7 @@ void Game::kGameLoop() {
             player.playerColor[2] += (1.0f - player.playerColor[2]) * fator;
             player.playerColor[3] += (1.0f - player.playerColor[3]) * fator;
             
+			// Criação da Intersection;
             glColor4f(player.playerColor[2], player.playerColor[1], player.playerColor[0], player.playerColor[3]);
             glBegin(GL_QUADS);
             
