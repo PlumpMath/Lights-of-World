@@ -33,16 +33,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\game.hpp">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\graphics.hpp">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\object.hpp">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\player.hpp">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

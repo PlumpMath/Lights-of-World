@@ -26,6 +26,8 @@ void Game::kGameLoop() {
     
     Graphics graphics;
     Player player;
+
+	// Objetos de Interação;
     GameObject box;
     GameObject red_box;
     
