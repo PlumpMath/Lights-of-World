@@ -24,6 +24,9 @@
     <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -33,6 +36,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\graphics.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\object.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\player.hpp">

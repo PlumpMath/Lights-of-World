@@ -10,6 +10,19 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\game.cpp" />
+    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\graphics.cpp" />
+    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\main.cpp" />
+    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\object.cpp" />
+    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\player.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\game.hpp" />
+    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\graphics.hpp" />
+    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\object.hpp" />
+    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\player.hpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5E2EE800-73DB-49CD-9BB1-7743EBF48A89}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -81,17 +94,6 @@
       <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\game.cpp" />
-    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\graphics.cpp" />
-    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\main.cpp" />
-    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\player.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\game.hpp" />
-    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\graphics.hpp" />
-    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\player.hpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
