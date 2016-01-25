@@ -6,8 +6,8 @@
 //  Copyright © 2015 Vinicius A.M. Lobo. All rights reserved.
 //
 
-#ifndef graphics_hpp
-#define graphics_hpp
+#ifndef _GRAPHICS_HPP_
+#define _GRAPHICS_HPP_
 
 #include <stdio.h>
 
@@ -17,9 +17,9 @@ struct Graphics {
     Graphics();
     ~Graphics();
     
-    GLFWwindow *windowSpace;
+    GLFWwindow* windowSpace;
     
     bool kGameGetEvents(int key);
 };
 
-#endif /* graphics_hpp */
+#endif /* _GRAPHICS_HPP_ */

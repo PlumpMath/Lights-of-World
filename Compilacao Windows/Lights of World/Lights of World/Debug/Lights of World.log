@@ -1,26 +1,23 @@
-﻿Build started 24/01/2016 03:32:33.
+﻿Build started 25/01/2016 03:01:32.
 Project "Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Lights of World\Lights of World.vcxproj" on node 2 (Build target(s)).
 ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glew-1.9.0\include" /I"Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glfw-3.1.1\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\Lights of World\Sources\Lights of World\game.cpp" "..\..\..\Lights of World\Sources\Lights of World\object.cpp" "..\..\..\Lights of World\Sources\Lights of World\player.cpp"
+  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glew-1.9.0\include" /I"Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glfw-3.1.1\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\..\Lights of World\Sources\Lights of World\game.cpp" "..\..\..\Lights of World\Sources\Lights of World\graphics.cpp" "..\..\..\Lights of World\Sources\Lights of World\main.cpp" "..\..\..\Lights of World\Sources\Lights of World\object.cpp" "..\..\..\Lights of World\Sources\Lights of World\player.cpp"
   player.cpp
+z:\developer\lights-of-world\lights of world\sources\lights of world\player.cpp(55): warning C4554: '|' : check operator precedence for possible error; use parentheses to clarify precedence
 z:\developer\lights-of-world\lights of world\sources\lights of world\player.cpp(56): warning C4554: '|' : check operator precedence for possible error; use parentheses to clarify precedence
-z:\developer\lights-of-world\lights of world\sources\lights of world\player.cpp(57): warning C4554: '|' : check operator precedence for possible error; use parentheses to clarify precedence
   object.cpp
-z:\developer\lights-of-world\lights of world\sources\lights of world\object.cpp(38): warning C4554: '|' : check operator precedence for possible error; use parentheses to clarify precedence
-z:\developer\lights-of-world\lights of world\sources\lights of world\object.cpp(39): warning C4554: '|' : check operator precedence for possible error; use parentheses to clarify precedence
+c:\program files\microsoft visual studio 11.0\vc\include\stdlib.h(360): error C2381: 'exit' : redefinition; __declspec(noreturn) differs
+          c:\program files\windows kits\8.0\include\um\glut\glut.h(146) : see declaration of 'exit'
+z:\developer\lights-of-world\lights of world\sources\lights of world\object.cpp(80): warning C4018: '<' : signed/unsigned mismatch
+  main.cpp
+  graphics.cpp
+z:\developer\lights-of-world\lights of world\sources\lights of world\graphics.cpp(35): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
   game.cpp
-z:\developer\lights-of-world\lights of world\sources\lights of world\game.cpp(31): warning C4305: '=' : truncation from 'double' to 'float'
+c:\program files\microsoft visual studio 11.0\vc\include\stdlib.h(360): error C2381: 'exit' : redefinition; __declspec(noreturn) differs
+          c:\program files\windows kits\8.0\include\um\glut\glut.h(146) : see declaration of 'exit'
   Generating Code...
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Debug\Lights of World.exe" /INCREMENTAL /NOLOGO /LIBPATH:"Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glew-1.9.0\lib" /LIBPATH:"Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glfw-3.1.1\lib-vc2012" opengl32.lib glu32.lib glew32.lib glfw3.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Debug\Lights of World.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Debug\Lights of World.lib" /MACHINE:X86 Debug\game.obj
-  Debug\graphics.obj
-  Debug\main.obj
-  Debug\object.obj
-  Debug\player.obj
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  Lights of World.vcxproj -> Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Debug\Lights of World.exe
-Done Building Project "Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Lights of World\Lights of World.vcxproj" (Build target(s)).
+Done Building Project "Z:\Developer\Lights-of-World\Compilacao Windows\Lights of World\Lights of World\Lights of World.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:06.23
+Time Elapsed 00:00:08.05

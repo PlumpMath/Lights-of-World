@@ -21,9 +21,6 @@ struct Game {
     void kGameLoop();
     void kGameEvents(Graphics *graphics);
     
-    //INTER
-    float interColor[4];
-    
 private:
     bool k_game_running;
     

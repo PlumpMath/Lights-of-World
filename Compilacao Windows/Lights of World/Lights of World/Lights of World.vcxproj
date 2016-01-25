@@ -13,17 +13,13 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\game.cpp" />
     <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\graphics.cpp" />
-    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\lodepng.cpp" />
     <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\main.cpp" />
     <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\object.cpp" />
     <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\player.cpp" />
-    <ClCompile Include="..\..\..\Lights of World\Sources\Lights of World\image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\game.hpp" />
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\graphics.hpp" />
-    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\image.hpp" />
-    <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\lodepng.h" />
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\object.hpp" />
     <ClInclude Include="..\..\..\Lights of World\Sources\Lights of World\player.hpp" />
   </ItemGroup>
@@ -70,12 +66,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glew-1.9.0\include;Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glfw-3.1.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glew-1.9.0\lib;Z:\Developer\Lights-of-World\Lights of World\Frameworks\Window Frameworks\glfw-3.1.1\lib-vc2012;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

@@ -7,8 +7,14 @@
 //
 
 #include <GLFW/glfw3.h>
+#include <GLUT/glut.h>
+
+#include <iostream>
+#include <string>
+
 #include "object.hpp"
 
+// Game Object
 GameObject::GameObject() {
     // Position && Scale;
 	localPosition[0] = 0.0f;
@@ -35,11 +41,44 @@ void GameObject::kDraw() {
     
     for (int _vertex=0; _vertex<4; _vertex++) {
         
-        float _vertex_x = (_vertex==0 | _vertex==3) * localScale[0];
-        float _vertex_y = (_vertex==2 | _vertex==3) * localScale[1];
+        float _vertex_x = (_vertex==0 || _vertex==3) * localScale[0];
+        float _vertex_y = (_vertex==2 || _vertex==3) * localScale[1];
         
         glVertex2f(_vertex_x + localPosition[0], _vertex_y + localPosition[1]);
         
+    }
+    
+    glEnd();
+    glFlush();
+}
+
+
+// Text Object
+TextObject::TextObject() {
+    
+    // Inicializações;
+    textColor[0] = 1.0f;
+    textColor[1] = 1.0f;
+    textColor[2] = 1.0f;
+    textColor[3] = 1.0f;
+    
+    Text = "TextObject";
+    Font = GLUT_BITMAP_HELVETICA_12;
+}
+
+TextObject::~TextObject() {
+    
+}
+
+void TextObject::kDraw() {
+    
+    glBegin(GL_BITMAP);
+    
+    glColor4f(textColor[0], textColor[1], textColor[2], textColor[3]);
+    glRasterPos2f(localPosition[0], localPosition[1]);
+    
+    for (int _index=0; _index<std::strlen(Text); _index++) {
+        glutBitmapCharacter(Font, Text[_index]);
     }
     
     glEnd();

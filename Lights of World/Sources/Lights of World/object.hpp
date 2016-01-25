@@ -23,10 +23,28 @@ struct GameObject {
     bool kColisionDetect(GameObject *object);
     
 public:
+    float localScale[2];
+    float localPosition[2];
+    
+    float objectColor[4];
+};
+
+struct TextObject {
+    TextObject();
+    ~TextObject();
+    
+    void kDraw();
+    
+public:
+    
+    // Edições do Texto;
+    char* Text;
+    void* Font;
     
     float localScale[2];
     float localPosition[2];
     
+    float textColor[4];
 };
 
 #endif /* _OBJECT_HPP_ */

@@ -7,44 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		423840441C4F28B000850987 /* libglfw.3.1.dylib in Sources */ = {isa = PBXBuildFile; fileRef = 42A70C131BB162AA00CA926F /* libglfw.3.1.dylib */; };
-		424AA23B1C550DDB009A700F /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 424AA2321C550DDB009A700F /* game.cpp */; };
-		424AA23C1C550DDB009A700F /* graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 424AA2341C550DDB009A700F /* graphics.cpp */; };
-		424AA23D1C550DDB009A700F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 424AA2361C550DDB009A700F /* main.cpp */; };
-		424AA23E1C550DDB009A700F /* object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 424AA2371C550DDB009A700F /* object.cpp */; };
-		424AA23F1C550DDB009A700F /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 424AA2391C550DDB009A700F /* player.cpp */; };
 		428B0CB91BAFD448001FA55C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428B0CB81BAFD448001FA55C /* OpenGL.framework */; };
 		428B0CBC1BAFD455001FA55C /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428B0CBA1BAFD455001FA55C /* GLKit.framework */; };
 		428B0CBD1BAFD455001FA55C /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 428B0CBB1BAFD455001FA55C /* GLUT.framework */; };
 		42A70C141BB162AA00CA926F /* libglfw.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A70C131BB162AA00CA926F /* libglfw.3.1.dylib */; };
 		42A70C191BB2464B00CA926F /* libglfw.3.1.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 42A70C131BB162AA00CA926F /* libglfw.3.1.dylib */; };
-		42E1FBC61C54941B00FFD504 /* GLUT.framework in Resources */ = {isa = PBXBuildFile; fileRef = 428B0CBB1BAFD455001FA55C /* GLUT.framework */; };
-		42E1FBC71C5494E600FFD504 /* GLKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 428B0CBA1BAFD455001FA55C /* GLKit.framework */; };
-		42E1FBC81C5494E600FFD504 /* OpenGL.framework in Resources */ = {isa = PBXBuildFile; fileRef = 428B0CB81BAFD448001FA55C /* OpenGL.framework */; };
+		42CF82F21C556E720034228C /* GLKit.framework in Resources */ = {isa = PBXBuildFile; fileRef = 428B0CBA1BAFD455001FA55C /* GLKit.framework */; };
+		42CF82F31C556E720034228C /* GLUT.framework in Resources */ = {isa = PBXBuildFile; fileRef = 428B0CBB1BAFD455001FA55C /* GLUT.framework */; };
+		42CF82F41C556E720034228C /* OpenGL.framework in Resources */ = {isa = PBXBuildFile; fileRef = 428B0CB81BAFD448001FA55C /* OpenGL.framework */; };
+		42CF82FE1C556E940034228C /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CF82F51C556E940034228C /* game.cpp */; };
+		42CF82FF1C556E940034228C /* graphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CF82F71C556E940034228C /* graphics.cpp */; };
+		42CF83001C556E940034228C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CF82F91C556E940034228C /* main.cpp */; };
+		42CF83011C556E940034228C /* object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CF82FA1C556E940034228C /* object.cpp */; };
+		42CF83021C556E940034228C /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CF82FC1C556E940034228C /* player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		424AA2321C550DDB009A700F /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
-		424AA2331C550DDB009A700F /* game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
-		424AA2341C550DDB009A700F /* graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graphics.cpp; sourceTree = "<group>"; };
-		424AA2351C550DDB009A700F /* graphics.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = graphics.hpp; sourceTree = "<group>"; };
-		424AA2361C550DDB009A700F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		424AA2371C550DDB009A700F /* object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = object.cpp; sourceTree = "<group>"; };
-		424AA2381C550DDB009A700F /* object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = object.hpp; sourceTree = "<group>"; };
-		424AA2391C550DDB009A700F /* player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
-		424AA23A1C550DDB009A700F /* player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = player.hpp; sourceTree = "<group>"; };
-		4285C2CA1BB4C78000577C6D /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = /Library/Frameworks/SDL_image.framework; sourceTree = "<absolute>"; };
-		4285C2CD1BB4CB2C00577C6D /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = /Library/Frameworks/SDL.framework; sourceTree = "<absolute>"; };
 		428B0C931BAFC77D001FA55C /* Lights of World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lights of World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		428B0CAF1BAFD39D001FA55C /* Relatório.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "Relatório.md"; path = "/Users/Programmer/Developer/Lights-of-World/Lights of World/Graphic Contents/Relatório.md"; sourceTree = "<absolute>"; };
-		428B0CB41BAFD431001FA55C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		428B0CB61BAFD439001FA55C /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		428B0CB81BAFD448001FA55C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		428B0CBA1BAFD455001FA55C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		428B0CBB1BAFD455001FA55C /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
-		428B0CBE1BAFD462001FA55C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		42A70C111BB15AB500CA926F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		42A70C131BB162AA00CA926F /* libglfw.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.1.dylib; path = /usr/local/lib/libglfw.3.1.dylib; sourceTree = "<absolute>"; };
+		42A70C131BB162AA00CA926F /* libglfw.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.1.dylib; path = ../../../../../../usr/local/lib/libglfw.3.1.dylib; sourceTree = "<group>"; };
+		42CF82F51C556E940034228C /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		42CF82F61C556E940034228C /* game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
+		42CF82F71C556E940034228C /* graphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graphics.cpp; sourceTree = "<group>"; };
+		42CF82F81C556E940034228C /* graphics.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = graphics.hpp; sourceTree = "<group>"; };
+		42CF82F91C556E940034228C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		42CF82FA1C556E940034228C /* object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = object.cpp; sourceTree = "<group>"; };
+		42CF82FB1C556E940034228C /* object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = object.hpp; sourceTree = "<group>"; };
+		42CF82FC1C556E940034228C /* player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
+		42CF82FD1C556E940034228C /* player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = player.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,14 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				42A70C131BB162AA00CA926F /* libglfw.3.1.dylib */,
-				4285C2CD1BB4CB2C00577C6D /* SDL.framework */,
-				4285C2CA1BB4C78000577C6D /* SDL_image.framework */,
 				428B0CBA1BAFD455001FA55C /* GLKit.framework */,
-				428B0CBE1BAFD462001FA55C /* Cocoa.framework */,
 				428B0CBB1BAFD455001FA55C /* GLUT.framework */,
 				428B0CB81BAFD448001FA55C /* OpenGL.framework */,
-				428B0CB61BAFD439001FA55C /* Carbon.framework */,
-				428B0CB41BAFD431001FA55C /* AppKit.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -148,17 +137,33 @@
 		428B0CB11BAFD39D001FA55C /* Lights of World */ = {
 			isa = PBXGroup;
 			children = (
-				424AA2321C550DDB009A700F /* game.cpp */,
-				424AA2331C550DDB009A700F /* game.hpp */,
-				424AA2341C550DDB009A700F /* graphics.cpp */,
-				424AA2351C550DDB009A700F /* graphics.hpp */,
-				424AA2361C550DDB009A700F /* main.cpp */,
-				424AA2371C550DDB009A700F /* object.cpp */,
-				424AA2381C550DDB009A700F /* object.hpp */,
-				424AA2391C550DDB009A700F /* player.cpp */,
-				424AA23A1C550DDB009A700F /* player.hpp */,
+				42CF83041C55CDCE0034228C /* Headers */,
+				42CF83031C55CDBE0034228C /* Source */,
 			);
 			path = "Lights of World";
+			sourceTree = "<group>";
+		};
+		42CF83031C55CDBE0034228C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				42CF82F91C556E940034228C /* main.cpp */,
+				42CF82F51C556E940034228C /* game.cpp */,
+				42CF82F71C556E940034228C /* graphics.cpp */,
+				42CF82FA1C556E940034228C /* object.cpp */,
+				42CF82FC1C556E940034228C /* player.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		42CF83041C55CDCE0034228C /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				42CF82F61C556E940034228C /* game.hpp */,
+				42CF82F81C556E940034228C /* graphics.hpp */,
+				42CF82FB1C556E940034228C /* object.hpp */,
+				42CF82FD1C556E940034228C /* player.hpp */,
+			);
+			name = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +224,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				42A70C191BB2464B00CA926F /* libglfw.3.1.dylib in Resources */,
-				42E1FBC71C5494E600FFD504 /* GLKit.framework in Resources */,
-				42E1FBC61C54941B00FFD504 /* GLUT.framework in Resources */,
-				42E1FBC81C5494E600FFD504 /* OpenGL.framework in Resources */,
+				42CF82F21C556E720034228C /* GLKit.framework in Resources */,
+				42CF82F31C556E720034228C /* GLUT.framework in Resources */,
+				42CF82F41C556E720034228C /* OpenGL.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,12 +237,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				423840441C4F28B000850987 /* libglfw.3.1.dylib in Sources */,
-				424AA23D1C550DDB009A700F /* main.cpp in Sources */,
-				424AA23B1C550DDB009A700F /* game.cpp in Sources */,
-				424AA23F1C550DDB009A700F /* player.cpp in Sources */,
-				424AA23E1C550DDB009A700F /* object.cpp in Sources */,
-				424AA23C1C550DDB009A700F /* graphics.cpp in Sources */,
+				42CF83001C556E940034228C /* main.cpp in Sources */,
+				42CF82FE1C556E940034228C /* game.cpp in Sources */,
+				42CF83021C556E940034228C /* player.cpp in Sources */,
+				42CF82FF1C556E940034228C /* graphics.cpp in Sources */,
+				42CF83011C556E940034228C /* object.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,23 +334,17 @@
 		428B0CA51BAFC77D001FA55C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					/usr/local/lib,
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = (
-					/usr/local/include,
-					/Library/Frameworks/SDL.framework/SDL,
-				);
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
 				INFOPLIST_FILE = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/lib,
-					/Library/Frameworks/SDL.framework/SDL,
-				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OBJROOT = "$(PROJECT_DIR)/Builds/MacOS/Intermediates";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sincrob.Lights-of-World";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,23 +357,17 @@
 		428B0CA61BAFC77D001FA55C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					/usr/local/lib,
 					"$(LOCAL_LIBRARY_DIR)/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = (
-					/usr/local/include,
-					/Library/Frameworks/SDL.framework/SDL,
-				);
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_EXPAND_BUILD_SETTINGS = NO;
 				INFOPLIST_FILE = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					/usr/local/lib,
-					/Library/Frameworks/SDL.framework/SDL,
-				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OBJROOT = "$(PROJECT_DIR)/Builds/MacOS/Intermediates";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sincrob.Lights-of-World";
 				PRODUCT_NAME = "$(TARGET_NAME)";

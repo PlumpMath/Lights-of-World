@@ -6,6 +6,9 @@
 //  Copyright © 2015 Vinicius A.M. Lobo. All rights reserved.
 //
 
+#include <GLFW/glfw3.h>
+#include <GLUT/glut.h>
+
 #include <iostream>
 
 #include "game.hpp"
@@ -31,6 +34,8 @@ void Game::kGameLoop() {
     GameObject box;
     GameObject red_box;
     
+    TextObject simple_text;
+    
     box.localPosition[0] = -0.3f;
     box.localPosition[1] = -0.3f;
     
@@ -47,8 +52,15 @@ void Game::kGameLoop() {
         
         float fator=0.025f;
         
+        simple_text.localPosition[0] = -1.00;
+        simple_text.localPosition[1] = -0.98;
+        
+        simple_text.kDraw();
+        
         // Detecção de Colisão;
         if (player.kColisionDetect(&box)) {
+            
+            simple_text.Text = "SincroB Engine v0.0.1 <SmartObject player> ColisionDetect <GameObject box>";
             
             // Coloração do Player;
             player.playerColor[0] += (0.0f - player.playerColor[0]) * fator;
@@ -86,6 +98,9 @@ void Game::kGameLoop() {
             glFlush();
             
         } else {
+            
+            simple_text.Text = "SincroB Engine v0.0.1";
+            
             player.playerColor[0] += (1.0f - player.playerColor[0]) * fator;
             player.playerColor[1] += (1.0f - player.playerColor[1]) * fator;
             player.playerColor[2] += (1.0f - player.playerColor[2]) * fator;
