@@ -1,6 +1,11 @@
 # Lights-of-World
 # Jogo Desenvolvido em C++ com GLFW, SDL e OpenGL.
 
+# Devlog 28 - Criação do Projeto de Controle de Renderização;
+Estava pensando na criação de um controlador de Render, pensei em usar o vector para esse trabalho, a ideia seria bem simples, na construção de um objeto eu diria qual cena eu estou utilizando, essa cena teria apenas os objetos que seriam desenhado, passando por todos os objetos eu executaria apenas a função de desenho de cada;
+
+- Linha: std::vector<Draw> draws; // Passaria por todos os itens executando o draws[index].draw();
+
 # Devlog 29 - Reconstrução (Declarações);
 O Projeto estava sendo escrito com o puro windows.h, mas tinha problemas com o Cocoa do MacOSX,
 então foi alternado para utilizar o GLFW, uma biblioteca bem famosa por sinal, ela me permite
