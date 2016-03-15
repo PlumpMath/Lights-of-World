@@ -1,0 +1,33 @@
+﻿Build started 05/03/2016 14:55:45.
+Project "\\vmware-host\Shared Folders\Developer\Lights-of-World\2DGameEngine\2DGameEngine\2DGameEngine.vcxproj" on node 2 (Build target(s)).
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt camera.cpp game.cpp rectangle.cpp
+  camera.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  rectangle.cpp
+  game.cpp
+Link:
+  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\vmware-host\Shared Folders\Developer\Lights-of-World\2DGameEngine\Debug\2DGameEngine.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Vinicius A.M. Lobo\Desktop\GL Files\lib" UxTheme.lib opengl32.lib hid.lib glew32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"\\vmware-host\Shared Folders\Developer\Lights-of-World\2DGameEngine\Debug\2DGameEngine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\vmware-host\Shared Folders\Developer\Lights-of-World\2DGameEngine\Debug\2DGameEngine.lib" /MACHINE:X86 Debug\camera.obj
+  Debug\game.obj
+  Debug\graphics.obj
+  Debug\main.obj
+  Debug\mat4.obj
+  Debug\maths.obj
+  Debug\objects.obj
+  Debug\rectangle.obj
+  Debug\vec2.obj
+  Debug\vec3.obj
+  Debug\vec4.obj
+camera.obj : error LNK2019: unresolved external symbol "public: __thiscall engine::graphics::KX_MovingObject::~KX_MovingObject(void)" (??1KX_MovingObject@graphics@engine@@QAE@XZ) referenced in function __unwindfunclet$??0KX_Camera@graphics@engine@@QAE@XZ$0
+objects.obj : error LNK2019: unresolved external symbol "public: __thiscall engine::graphics::KX_StaticObject::~KX_StaticObject(void)" (??1KX_StaticObject@graphics@engine@@QAE@XZ) referenced in function __unwindfunclet$??0KX_MovingObject@graphics@engine@@QAE@ABUvec2@maths@2@0@Z$0
+rectangle.obj : error LNK2019: unresolved external symbol "public: __thiscall engine::maths::vec4::vec4(void)" (??0vec4@maths@engine@@QAE@XZ) referenced in function "public: __thiscall engine::graphics::KX_ScreenRect::KX_ScreenRect(float,float,float,float)" (??0KX_ScreenRect@graphics@engine@@QAE@MMMM@Z)
+vec3.obj : error LNK2019: unresolved external symbol "struct engine::maths::vec3 __cdecl engine::maths::operator+(struct engine::maths::vec3,struct engine::maths::vec3 const &)" (??Hmaths@engine@@YA?AUvec3@01@U201@ABU201@@Z) referenced in function "struct engine::maths::vec3 __cdecl engine::maths::operator+(struct engine::maths::vec3,float const &)" (??Hmaths@engine@@YA?AUvec3@01@U201@ABM@Z)
+vec4.obj : error LNK2019: unresolved external symbol "struct engine::maths::vec4 __cdecl engine::maths::operator+(struct engine::maths::vec4,struct engine::maths::vec4 const &)" (??Hmaths@engine@@YA?AUvec4@01@U201@ABU201@@Z) referenced in function "struct engine::maths::vec4 __cdecl engine::maths::operator+(struct engine::maths::vec4,float const &)" (??Hmaths@engine@@YA?AUvec4@01@U201@ABM@Z)
+MSVCRTD.lib(crtexew.obj) : error LNK2019: unresolved external symbol _WinMain@16 referenced in function ___tmainCRTStartup
+\\vmware-host\Shared Folders\Developer\Lights-of-World\2DGameEngine\Debug\2DGameEngine.exe : fatal error LNK1120: 6 unresolved externals
+Done Building Project "\\vmware-host\Shared Folders\Developer\Lights-of-World\2DGameEngine\2DGameEngine\2DGameEngine.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:05.63
